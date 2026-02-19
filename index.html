@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Daniel Enrique</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0b0e11; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { text-align: center; padding: 20px; border: 1px solid #333; border-radius: 15px; background: #15191d; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #f0ad4e; margin-bottom: 10px; }
+        p { font-size: 1.1em; color: #a0a0a0; }
+        .status { color: #5cb85c; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola Mundo - dan88089.brave</h1>
+        <p>Bienvenido a mi portafolio descentralizado.</p>
+        <p>Estado del nodo: <span class="status">En línea (Web3)</span></p>
+        <div id="reloj"></div>
+    </div>
+
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date();
+            document.getElementById('reloj').innerHTML = "Hora local: " + ahora.toLocaleTimeString();
+        }
+        setInterval(actualizarReloj, 1000);
+        actualizarReloj();
+    </script>
+</body>
+</html>
