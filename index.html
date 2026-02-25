@@ -3,30 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Daniel Enrique</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0b0e11; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { text-align: center; padding: 20px; border: 1px solid #333; border-radius: 15px; background: #15191d; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color: #f0ad4e; margin-bottom: 10px; }
-        p { font-size: 1.1em; color: #a0a0a0; }
-        .status { color: #5cb85c; font-weight: bold; }
-    </style>
+    <title>Daniel Andrade | Ing. Químico & Cloud</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Hola Mundo - dan88089.brave</h1>
-        <p>Bienvenido a mi portafolio descentralizado.</p>
-        <p>Estado del nodo: <span class="status">En línea (Web3)</span></p>
-        <div id="reloj"></div>
+    <div class="contenedor">
+        <header>
+            <div id="foto-perfil"></div>
+            <h1>Daniel Enrique Andrade Aguilar</h1>
+            <p class="subtitulo">Ingeniero Químico en Formación | Especialista Cloud</p>
+        </header>
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy un estudiante de <strong>Ingeniería Química</strong> apasionado por la sostenibilidad y la gestión ambiental. 
+                Actualmente, desarrollo mi tesis en la síntesis de nanohidroxiapatita a partir de residuos de la industria atunera. 
+                Cuento con experiencia técnica en la <strong>PTAR de Portoviejo</strong> y aspiro a cursar una maestría en México para profundizar mis conocimientos en ingeniería verde.
+            </p>
+        </section>
+
+        <section id="habilidades">
+            <h2><i class="fas fa-tools"></i> Habilidades Técnicas</h2>
+            <div class="habilidades-grid">
+                <div class="habilidad-cat">
+                    <h3><i class="fas fa-flask"></i> Ingeniería</h3>
+                    <span class="tag">Análisis de Aguas (PTAR)</span>
+                    <span class="tag">Síntesis de Nanomateriales</span>
+                    <span class="tag">Sistemas de Bombeo</span>
+                </div>
+                <div class="habilidad-cat">
+                    <h3><i class="fas fa-laptop-code"></i> Tecnología</h3>
+                    <span class="tag">Google Cloud Computing</span>
+                    <span class="tag">Programación JavaScript</span>
+                    <span class="tag">Gestión Cloud</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificados">
+            <h2><i class="fas fa-award"></i> Certificaciones y Logros</h2>
+            
+            <h3>Ingeniería y Ciencia (UTM e Industria)</h3>
+            <div class="grid">
+                <div class="card" onclick="abrirImagen('certificado-simposio-utm.jpg', 'III Simposio Científico Internacional de Posgrado - UTM')">
+                    <i class="fas fa-microscope fa-2x"></i>
+                    <p>III Simposio Científico (UTM)</p>
+                </div>
+                <div class="card" onclick="abrirImagen('bombeo-ivan-bohman.jpg', 'Cálculo y Selección de Sistemas de Bombeo (40h)')">
+                    <i class="fas fa-gears fa-2x"></i>
+                    <p>Sistemas de Bombeo (Ivan Bohman)</p>
+                </div>
+                <div class="card" onclick="abrirImagen('tetrapak.jpg', 'Tetra Pak: Desperdicio Cero')">
+                    <i class="fas fa-leaf fa-2x"></i>
+                    <p>Tetra Pak: Desperdicio Cero</p>
+                </div>
+            </div>
+
+            <h3>Tecnología y Cloud</h3>
+            <div class="grid">
+                <div class="card" onclick="abrirImagen('google-cloud.jpg', 'Google Cloud Computing (80h)')">
+                    <i class="fab fa-google fa-2x" style="color: #4285F4;"></i>
+                    <p>Google Cloud Computing</p>
+                </div>
+                <div class="card" onclick="abrirImagen('diploma-javascript.png', 'Programación con JavaScript - MiríadaX')">
+                    <i class="fab fa-js-square fa-2x" style="color: #f7df1e;"></i>
+                    <p>JavaScript (MiríadaX)</p>
+                </div>
+            </div>
+
+            <h3>Liderazgo y Otros</h3>
+            <div class="grid">
+                <div class="card" onclick="abrirImagen('arbitro-nacional.jpg', 'Certificado: Árbitro de Fútbol Amateur')">
+                    <i class="fas fa-whistle fa-2x"></i>
+                    <p>Árbitro de Fútbol Amateur</p>
+                </div>
+                <div class="card" onclick="abrirImagen('educacion-financiera.jpg', 'Programa de Educación Financiera - BanEcuador')">
+                    <i class="fas fa-piggy-bank fa-2x"></i>
+                    <p>Educación Financiera</p>
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2><i class="fas fa-envelope"></i> Contacto y Redes</h2>
+            <div class="contacto-grid">
+                <a href="mailto:dan88089@gmail.com" class="contacto-link">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <span>Correo Electrónico</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/daniel-enrique-andrade-aguilar-7322a8193/" target="_blank" class="contacto-link">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/dan88089" target="_blank" class="contacto-link">
+                    <i class="fab fa-github fa-2x"></i>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://wa.me/593963941463" target="_blank" class="contacto-link">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Daniel Enrique Andrade Aguilar - Ingeniero Químico</p>
+        </footer>
     </div>
 
-    <script>
-        function actualizarReloj() {
-            const ahora = new Date();
-            document.getElementById('reloj').innerHTML = "Hora local: " + ahora.toLocaleTimeString();
-        }
-        setInterval(actualizarReloj, 1000);
-        actualizarReloj();
-    </script>
+    <div id="modal-flotante" class="modal" onclick="cerrarImagen()">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imagen-ampliada">
+        <div id="descripcion-imagen"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
