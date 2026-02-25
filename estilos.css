@@ -1,0 +1,141 @@
+:root {
+    --verde-oscuro: #1b4332;
+    --verde-primario: #2d6a4f;
+    --verde-acento: #40916c;
+    --verde-claro: #d8f3dc;
+    --blanco-fondo: #f9fbf9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--blanco-fondo);
+    color: var(--verde-oscuro);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contenedor { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-primario));
+    color: white;
+    border-radius: 0 0 30px 30px;
+}
+
+#foto-perfil {
+    width: 160px; height: 160px;
+    background-image: url('perfil.jpg'); /* Asegúrate de tener este archivo */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 6px solid var(--verde-claro);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2 { color: var(--verde-primario); border-bottom: 3px solid var(--verde-claro); padding-bottom: 10px; margin-top: 50px; }
+h3 { margin-top: 30px; color: var(--verde-acento); font-size: 1.2em; }
+
+#sobre-mi {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-top: -40px;
+}
+
+.habilidades-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.tag {
+    display: inline-block;
+    background-color: var(--verde-claro);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--verde-claro);
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); background-color: white; border-color: var(--verde-acento); }
+
+.card i { margin-bottom: 15px; color: var(--verde-primario); }
+
+/* --- Estilos del Modal --- */
+.modal {
+    display: none; position: fixed; z-index: 10000; left: 0; top: 0;
+    width: 100%; height: 100%; background-color: rgba(27, 67, 50, 0.95);
+    justify-content: center; align-items: center; flex-direction: column;
+}
+
+.modal-contenido {
+    max-width: 85%; max-height: 80%;
+    border: 5px solid white; border-radius: 10px;
+    animation: zoom 0.3s ease-out;
+}
+
+#descripcion-imagen { color: white; margin-top: 20px; font-size: 1.2em; text-align: center; }
+
+@keyframes zoom { from {transform: scale(0.5); opacity: 0;} to {transform: scale(1); opacity: 1;} }
+
+.cerrar { position: absolute; top: 20px; right: 40px; color: white; font-size: 50px; cursor: pointer; }
+
+#contacto {
+    padding-bottom: 50px;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contacto-link {
+    text-decoration: none;
+    color: var(--verde-oscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid var(--verde-claro);
+    transition: all 0.3s ease;
+}
+
+.contacto-link:hover {
+    background-color: var(--verde-claro);
+    transform: translateY(-5px);
+    border-color: var(--verde-acento);
+}
+
+.contacto-link i {
+    margin-bottom: 10px;
+    color: var(--verde-primario);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9em;
+    color: var(--verde-acento);
+}
